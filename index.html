@@ -45,19 +45,19 @@
         <hr>
 
         <fieldset class="mt-4">
-          <label for="guest">Enter your name (2 to 40 characters):</label>
-          <input id="guest" type="text" minlength="2" maxlength="40" value="Lilly">
+          <label for="guest">Enter the depth:</label>
+          <input id="guest" type="number" minlength="1" maxlength="100" value="6">
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="firstNumber">Enter first number (1 to 100):</label>
-          <input id="firstNumber" type="number" min="1" max="100" value=7>
+          <label for="firstNumber">Enter the width:</label>
+          <input id="firstNumber" type="number" min="1" max="100" value=8>
           <span id="firstWarning" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="secondNumber">Enter second number (1 to 100):</label>
-          <input id="secondNumber" type="number" min="1" max="100" value="12">
+          <label for="secondNumber">Enter the height:</label>
+          <input id="secondNumber" type="number" min="1" max="100" value="10">
           <span id="secondWarning" class="text-danger"></span>
         </fieldset>
 
@@ -68,7 +68,7 @@
       <div class="col-md-5 mb-4">
         <h2>Try these:</h2>
         <hr>
-        <button id="addButton" class="btn btn-primary">Add</button>
+        <button id="addButton" class="btn btn-primary">Get Volume</button>
         <button id="getJokeButton" class="btn btn-success">Get Joke</button>
         <button id="clicker" class="btn btn-indigo">Coming soon!</button>
         <hr>
