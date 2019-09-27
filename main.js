@@ -15,10 +15,10 @@ const updateWithAdd = async (event) => {
   document.querySelector('#result').innerHTML = ''
   if (document.querySelector('#depth').checkValidity() && document.querySelector('#width').checkValidity() && document.querySelector('#height').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const s = parseInt(document.querySelector('#depth').value)
+    const k = parseInt(document.querySelector('#depth').value)
     const i = parseInt(document.querySelector('#width').value)
     const j = parseInt(document.querySelector('#height').value)
-    const ans = `${s}, your voulme is ${mul(s, i, j)}.`
+    const ans = `${i}, your voulme is ${mul(k, i, j)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
