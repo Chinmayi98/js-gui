@@ -13,12 +13,12 @@ const validate = async (event) => {
 
 const updateWithAdd = async (event) => {
   document.querySelector('#result').innerHTML = ''
-  if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
+  if (document.querySelector('#depth').checkValidity() && document.querySelector('#width').checkValidity() && document.querySelector('#height').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const s = document.querySelector('#guest').value.replace(regex, '')
-    const i = parseInt(document.querySelector('#firstNumber').value)
-    const j = parseInt(document.querySelector('#secondNumber').value)
-    const ans = `${s}, your sum is ${add(i, j)}.`
+    const s = parseInt(document.querySelector('#depth').value)
+    const i = parseInt(document.querySelector('#width').value)
+    const j = parseInt(document.querySelector('#height').value)
+    const ans = `${s}, your voulme is ${mul(s, i, j)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
@@ -36,8 +36,8 @@ const updateWithJoke = async (event) => {
 // focusout is like blur, but it bubbles up
 
 document.addEventListener('focusout', event => {
-  if ((event.target && event.target.id === 'firstNumber') ||
-    (event.target && event.target.id === 'secondNumber')) {
+  if ((event.target && event.target.id === 'depth') ||
+    (event.target && event.target.id === 'width') || (event.target && event.target.id === 'height') ) {
     validate(event)
   }
 })
