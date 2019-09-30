@@ -1,17 +1,20 @@
 const updateWithAdd = async (event) => {
-  
-   {
-    
-    const k = parseInt(document.querySelector('#depth').value)
-    const i = parseInt(document.querySelector('#width').value)
-    const j = parseInt(document.querySelector('#height').value)
-    const ans = k*i*j
-
-    document.querySelector('#result').innerHTML = "volume is " +ans
+    const i = document.querySelector('#firstString').value;
+    const j = document.querySelector('#secondString').value;
+    const k = document.querySelector('#thirdString').value;
+    let ans = '';
+    if (i.length < j.length && i.length < k.length){
+      ans+=i;
+    }
+    else if((j.length<i.length)&&(j.length<k.length)){
+      ans+=j;
+    }
+    else{
+      ans+=k;
+    }
+    document.getElementById("result").innerHTML = "The smallest string is "+ans;
   }
-}
 
-document.addEventListener('click', event => {
-  if (event.target && event.target.id === 'addButton') { updateWithAdd(event) }
-})
+
+
 

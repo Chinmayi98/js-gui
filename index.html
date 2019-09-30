@@ -41,28 +41,26 @@
       <!--Rows have columns - column 1 (7/12) -->
       <div class="col-md-7 mb-4">
 
-        <h2>Calculating!!</h2>
+        <h2>Interactive app!</h2>
         <hr>
 
-          <fieldset class="mt-4">
-          <label for="width">Enter the width:</label>
-          <input id="width" type="number" min="1" max="100" value=8>
+        <fieldset class="mt-4">
+          <label for="firstString">Enter first string:</label>
+          <input id="firstString" type="text" min="1" max="100" value=Chinmayi>
           <span id="firstWarning" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="height">Enter the height:</label>
-          <input id="height" type="number" min="1" max="100" value="10">
+          <label for="secondString">Enter second String:</label>
+          <input id="secondString" type="text" min="1" max="100" value="Anil">
           <span id="secondWarning" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="depth">Enter the depth:</label>
-          <input id="depth" type="number" min="1" max="100" value="4">
+          <label for="thirdString">Enter third String:</label>
+          <input id="thirdString" type="text" min="1" max="100" value="Aruna">
           <span id="secondWarning" class="text-danger"></span>
         </fieldset>
-
-      
 
       </div>
       <!--end column 1-->
@@ -71,8 +69,7 @@
       <div class="col-md-5 mb-4">
         <h2>Try these:</h2>
         <hr>
-        <button id="addButton" class="btn btn-primary">Get Volume</button>
-
+        <button id="addButton" class="btn btn-primary" onclick=updateWithAdd()>Add</button>
         <hr>
         <p id="result"></p>
 
